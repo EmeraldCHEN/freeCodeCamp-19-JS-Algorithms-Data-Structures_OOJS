@@ -1,8 +1,8 @@
 							
-
 let motionModule = (function () {
   return {
-    glideMixin: function (obj) {
+    glideMixin: function (obj) {   // Use a Mixin to add common behavior between unrelated objects
+
       obj.glide = function() {
         console.log(obj.name + " is gliding on the water.");
       };
@@ -26,10 +26,15 @@ plane.fly(); // The plane - A737 is flying, wooosh!
 function Bird(name){
   this.name= name
 };
-let duck = new Bird("The duck");
+let duck = new Bird("The duck"); // There's a principle in programming called Don't Repeat Yourself (DRY). Inheritance helps.
 motionModule.glideMixin(duck);
 
 duck.glide();  // The duck is gliding on the water.
+
+
+
+
+// Retrieved from https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/object-oriented-programming
 
 
 
