@@ -1,7 +1,4 @@
 							
-function Bird(name)  {
-  this.name= name
-};
 
 let motionModule = (function () {
   return {
@@ -25,6 +22,10 @@ motionModule.flyMixin(plane);
 
 plane.fly(); // The plane - A737 is flying, wooosh!
 
+
+function Bird(name){
+  this.name= name
+};
 let duck = new Bird("The duck");
 motionModule.glideMixin(duck);
 
